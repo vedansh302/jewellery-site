@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headers}}
+</head>
+
+<body>
+    <nav class="mx-auto">
+        <div class="flex">
+            <button
+                class="md:hidden mt-6 ml-4 navbar-toggler flex items-center justify-center p-2 border border-transparent rounded-md text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+                type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <div class="searchBar md:hidden mt-12 ml-2">
+                <img class="w-12 h-13" src="images/search.png" alt="">
+            </div>
+            <div class="md:hidden logo mt-3 mx-auto">
+                <a href="/"><img class="w-28 h-28 " src="images/rk_logo.png" alt=""></a>
+            </div>
+            <div class="md:hidden cart mt-14 mr-4">
+                <img class="w-7 h-7" src="images/contact-us-20.png" alt="">
+            </div>
+            <div class="md:hidden cart mt-14">
+                <a href="/accountPage"><img class="w-7 h-7" src="images/user.png" alt=""></a>
+            </div>
+            <div class="md:hidden user mt-14 mr-3 ml-5">
+                <img class="w-7 h-7" src="images/cart.png" alt="">
+            </div>
+        </div>
+        <div class="hidden md:flex md:justify-end md:items-end md:font-mono md:mt-6">
+            <div class="contactus mx-auto ml-10">
+                <a href="" class="text-[#112A46] text-xl font-semibold">Search</a>
+                <input type="text" placeholder="Search..." class="pl-3 ml-2 rounded-md text-[#112A46]">
+            </div>
+            <div class="flex">
+                <a href=""><img class="w-8 h-8  mt-1" src="images/contact-us-20.png" alt=""></a>
+                <button class="font-mono text-xl text-[#7F2727] font-medium rounded-md py-1 px-3">Contact Us</button>
+            </div>
+            <div class="ml-1 flex">
+                <img src="images/user.png" alt="" class="w-8 h-8 mr-1">
+                <a href="#" class="text-[#7F2727] text-xl font-medium">{{user.username}}</a>
+            </div>
+            <div class="ml-4 mr-10 flex">
+                <img src="images/cart.png" alt="" class="w-8 h-8 mr-1">
+                <a href="#" class="text-[#7F2727] text-xl font-medium mr-10">My Cart</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="mainNav flex justify-center">
+        <div class="logo hidden md:flex">
+            <a href="/"><img src="images/rk_logo.png" class="w-32 mt-3" alt=""></a>
+        </div>
+        <div class="hidden md:flex mylinks">
+            <ul class="flex mt-7 ml-5 font-serif">
+                <li class="md:pr-3 md:pl-2 md:mt-5 md:text-[#7F2727] text-lg"> <a href="/">Gemstones</a></li>
+                <li class="md:pr-3 md:pl-2 md:mt-5 md:text-[#7F2727] md:text-lg"><a href="#jewellery">Jewellery </a>
+                </li>
+                <li class="md:pr-3 md:pl-2 md:mt-5 md:text-base"><a href="">Rudraksha </a></li>
+                <li class="md:pr-3 md:pl-2 md:mt-5 md:text-base"><a href="">Gem Recommendation </a></li>
+                <li class="md:pr-3 md:pl-2 md:mt-5 md:text-base"><a href="">Custom Jewellery </a></li>
+                <li class="md:pr-3 md:pl-2 md:mt-5 md:text-base"><a href="">Pearls </a></li>
+            </ul>
+        </div>
+    </div>
+
+    {{!-- {{>navbar}} --}}
+    <div class="img bg-no-repeat bg-[url('images/model.jpeg')] bg-cover ">
+        {{!-- <img class="model-img" src="images/model.jpeg" alt="model wearing jewellery"> --}}
+        <div class="flex justify-center items-center ">
+            <h1 class="text-white font-mono text-4xl ml-10 md:ml-64 md:mr-64 mr-10 mt-14 md:ml:40">You will fall in love
+                with jewellery new Collection as soon as you view it
+            </h1>
+        </div>
+        <div class="flex items-center justify-center">
+            <a href="#jewellery"><button
+                    class="text-white font-mono mt-10 mb-14 border-2 rounded-sm px-10 py-2 font-semibold">SHOP NOW
+                </button></a>
+        </div>
+    </div>
+    
+    <div class="category" id="jewellery">
+        <div class="categories flex justify-center items-center mt-10 font-serif text-4xl">
+            <h1>Shop By category</h1>
+        </div>
+        <div class="products-category ml-7 md:ml-0 mt-10 mb-20 md:flex">
+            <div class="necklace ">
+                <a href="/necklace"><img class="w-64 h-64 mr-6 ml-2" src="images/necklaces.jpeg" alt="">
+                    <h1 class="font-serif text-xl ml-10 mt-1">Necklace</h1>
+                </a>
+            </div>
+            <div class="bracelets">
+                <a href="/bracelets"><img class="w-64 h-64 mr-8 ml-3" src="images/bracelets.jpeg" alt="">
+                    <h1 class="font-serif text-xl ml-10 mt-1">Bracelets</h1>
+                </a>
+            </div>
+            <div class="earrings" id="earrings">
+                <a href="/earings"><img class="w-52 h-64 mr-3 md:ml-2 ml-8" src="images/earings.jpg" alt="">
+                    <h1 class="font-serif text-xl ml-10 mt-1">Earrings</h1>
+                </a>
+            </div>
+            <div class="rings" id="rings">
+                <a href="/Rings"><img class="w-64 h-64 mr-10 md:ml-4 ml-1" src="images/rings.jpeg" alt="">
+                    <h1 class="font-serif text-xl ml-10 mt-1">Rings</h1>
+                </a>
+            </div>
+            <div class="chains" id="chains">
+                <a href="/Chains"><img class="w-64 h-64 mr-10 ml-1" src="images/chain.jpeg" alt="">
+                    <h1 class="font-serif text-xl ml-10 mt-1">Chains</h1>
+                </a>
+            </div>
+            {{!-- <div class="engagementRing">
+                <img class="w-80 h-80 mr-10 ml-5" height="200px" src="images/engagementRings.jpg" alt="">
+            </div> --}}
+    
+        </div>
+    </div>
+    
+    
+    <div class="aboutUs bg-[#9EB6A5]">
+        <div class="md:flex">
+            <div class="img flex">
+                <img class="w-full" src="images/abot.jpeg" alt="">
+            </div>
+            <div class="">
+                <h1 class="flex justify-center items-center font-serif text-4xl mt-5">An Ethical Content</h1>
+                <p class="flex justify-center items-center md:mr-20 mr-5 ml-11 md:ml-20 font-serif text-2xl mt-3">Making
+                    jewelry requires responsibility to the earth that creates our materials and respect for the people
+                    who inhabit
+                    it. From day one, we committed to creating designs of ethical origins from mine to market. Today,
+                    we're a proud leader
+                    in sustainable sourcing and mindful production.</p>
+                <div class="shopNowButton flex justify-center items-center mt-2">
+                    <a href="#jewellery"><button class="font-serif text-xl underline">Shop Now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="aboutusInfo mb-20 ">
+        <div class="flex justify-center items-center mt-5 mb-3">
+            <h1 class="font-serif text-2xl">About Us</h1>
+        </div>
+        <div class="flex justify-center items-center md:ml-52 ml-10 mr-4 md:mr-40">
+            <p class="text-2xl font-serif">Making jewelry requires responsibility to the earth that creates our
+                materials and respect for the people who inhabit
+                it. From day one, we committed to creating designs of ethical origins from mine to market. Today, we’re
+                a proud leader
+                in sustainable sourcing and mindful production.</p>
+        </div>
+    
+    </div>
+    
+    </body>
+    <script>
+        document.getElementById("hideButton").addEventListener("click", hidden)
+        function hidden() {
+            let earing = document.getElementById("earrings");
+            let ring = document.getElementById("rings");
+            let chain = document.getElementById("chains")
+            if (earing.style.display !== "none" && ring.style.display !== "none" && chain.style.display !== "none") {
+                earing.style.display = "none";
+                ring.style.display = "none";
+                chain.style.display = "block";
+            }
+        }
+    </script>
+    </script>
+
+</body>
+
+</html>

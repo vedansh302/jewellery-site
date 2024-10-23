@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headers}}
+    <title>RbSons</title>
+</head>
+
+<body class="bg-[#f8f6f1]">
+    {{>navbar}}
+    <div
+        class="absolute top-80 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 px-5 py-5 rounded-2xl bg-[#F5F3F3] mt-10">
+        <div class="buttons flex justify-center items-center mt-5">
+            <a href="/login"><button
+                    class="bg-[#ACC8E5] text-[#112A46] px-10 py-2 rounded-lg font-mono font-font-medium text-lg">Login</button></a>
+            <a href="/accountPage"><button
+                    class="ml-4 bg-[#ACC8E5] text-[#112A46] px-9 py-2 rounded-lg font-mono font-medium text-lg">Register</button></a>
+        </div>
+        <div class="account flex justify-center items-center mx-auto">
+            <div id="loginForm" class="loginForm mt-3 ml-2">
+                <form action="/login" method="post">
+                    <div class="name">
+                        <label for="name" class="font-cubano text-lg text-[#112A46] mr-12">Name</label>
+                        <input type="text" placeholder="Enter your name" required="true" name="username"
+                            class="border-2 border-[#DDDDDD] px-2 pt-1 pb-1 rounded-lg mb-1">
+                    </div>
+                    <div class="email">
+                        <label for="email" class="font-mono text-lg text-[#112A46] mr-10">Email</label>
+                        <input type="email" name="Register_email" required="true" id="" placeholder="Enter your Email Address"
+                            class="border-2 border-[#DDDDDD] px-2 pt-1 pb-1 rounded-lg mb-1">
+                    </div>
+                    <div class="password">
+                        <label for="password" class="font-mono text-lg text-[#112A46] mr-3">Password</label>
+                        <input type="password" name="Register_password" required="true" id="" placeholder="Password"
+                            class="border-2 border-[#DDDDDD] px-2 pt-1 pb-1 rounded-lg">
+                    </div>
+
+                    <button type="submit"
+                        class="bg-[#ACC8E5] font-mono font-medium text-[#271717] text-lg px-10 py-1 rounded-lg mt-5 ml-12">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

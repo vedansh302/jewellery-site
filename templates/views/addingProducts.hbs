@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{!-- {{>headers}}   --}}
+    <title>Document</title>
+</head>
+<body>
+    {{!-- {{>navbar}} --}}
+    <div class="addProducts">
+        <form action="/Products" method="post" enctype="multipart/form-data">
+        <div class="">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter Product name" name="name">
+        </div>
+        <div class="">
+            <label for="description">Description</label>
+            <input type="text" placeholder="Enter Product Description" name="description">
+        </div>
+        <div class="">
+            <label for="richDescription">More Details Related to Products</label>
+            <input type="text" name="richDescription">
+        </div>
+        <div class="">
+            <label for="image">Image</label>
+            <input type="file" name="image">
+        </div>
+        <div class="">
+            <label for="countInStock">In Stock</label>
+            <input type="number" name="countInStock" id="">
+        </div>
+        {{!-- <div class="">
+            <label for="images">More Images</label>
+            <input type="file" name="images" id="">
+        </div> --}}
+        <div class="">
+            <label for="brand">Brand</label>
+            <input type="text" name="brand" placeholder="Enter your brand name">
+        </div>
+        <div class="">
+            <label for="price">Price</label>
+            <input type="text" name="price">
+        </div>
+
+        <div class=""></div>
+            <label for="makingCharges">Making Charges</label>
+            <input type="text" name="makingCharges">
+        </div>
+
+        <div class="">
+            <label for="category">Category</label>
+            <select name="category" id="">
+                <option value="Gemstones">Gemstones</option>
+                <option value="Rings">Ring</option>
+                <option value="Earings">Earings</option>
+                <option value="Necklace">Necklace</option>
+                <option value="Bracelets">Bracelets</option>
+                <option value="Engagement Ring">Engagement Ring</option>
+            </select>
+        </div>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

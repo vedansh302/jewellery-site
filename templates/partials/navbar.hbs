@@ -1,0 +1,79 @@
+<nav class="mx-auto w-full p-4">
+    <div class="flex justify-between items-center">
+        <!-- Mobile Menu Toggle Button -->
+        <button
+            class="md:hidden navbar-toggler flex items-center justify-center p-2 border border-transparent rounded-md text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+            type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        <!-- Search Icon for Mobile -->
+        <div class="searchBar md:hidden mt-2">
+            <img class="w-8 h-8" src="images/search.png" alt="Search">
+        </div>
+
+        <!-- Logo Centered for Mobile -->
+        <div class="logo md:hidden mx-auto">
+            <a href="/"><img class="w-20 h-20" src="images/rk_logo.png" alt="Logo"></a>
+        </div>
+
+        <!-- Icons on the Right for Mobile -->
+        <div class="flex items-center space-x-3 mt-2">
+            <div class="cart md:hidden">
+                <img class="w-6 h-6" src="images/contact-us-20.png" alt="Contact">
+            </div>
+            <div class="md:hidden">
+                <a href="/accountPage"><img class="w-6 h-6" src="images/user.png" alt="User"></a>
+            </div>
+            <div class="user md:hidden">
+                <img class="w-6 h-6" src="images/cart.png" alt="Cart">
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex md:justify-between md:items-center md:mt-4">
+        <!-- Search Bar for Desktop -->
+        <div class="contactus flex items-center space-x-2">
+            <a href="#" class="text-[#112A46] text-xl font-semibold">Search</a>
+            <input type="text" placeholder="Search..." class="pl-3 rounded-md text-[#112A46] border border-gray-300">
+        </div>
+
+        <!-- Contact, User, and Cart for Desktop -->
+        <div class="flex items-center space-x-6">
+            <div class="flex items-center space-x-1">
+                <a href="#"><img class="w-8 h-8" src="images/contact-us-20.png" alt="Contact Us"></a>
+                <button class="text-xl text-[#7F2727] font-medium py-1 px-3">Contact Us</button>
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="images/user.png" alt="User" class="w-8 h-8">
+                <a href="/accountPage" class="text-[#7F2727] text-xl font-medium">{{user.username}}</a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="images/cart.png" alt="Cart" class="w-8 h-8">
+                <a href="/mycart" class="text-[#7F2727] text-xl font-medium">My Cart</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="mainNav flex justify-center">
+    <div class="logo hidden md:flex">
+        <a href="/"><img src="images/rk_logo.png" class="w-32 mt-3" alt=""></a>
+    </div>
+    <div class="hidden md:flex mylinks">
+        <ul class="flex mt-7 ml-5 font-serif">
+            <li class="md:pr-3 md:pl-2 md:mt-5 md:text-[#7F2727] text-lg"> <a href="/">Gemstones</a></li>
+            <li class="md:pr-3 md:pl-2 md:mt-5 md:text-[#7F2727] md:text-lg"><a href="#jewellery">Jewellery </a></li>
+            <li class="md:pr-3 md:pl-2 md:mt-5 md:text-base"><a href="">Rudraksha </a></li>
+            <li class="md:pr-3 md:pl-2 md:mt-5 md:text-base"><a href="">Gem Recommendation </a></li>
+            <li class="md:pr-3 md:pl-2 md:mt-5 md:text-base"><a href="">Custom Jewellery </a></li>
+            <li class="md:pr-3 md:pl-2 md:mt-5 md:text-base"><a href="">Pearls </a></li>
+        </ul>
+    </div>
+</div>

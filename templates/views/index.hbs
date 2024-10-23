@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headers}}
+    <title>RbSons</title>
+    <style>
+        .model-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="img bg-no-repeat bg-[url('images/model.jpeg')] bg-cover bg-center h-[70vh] flex flex-col justify-center items-center text-center px-4 md:px-0">
+        {{!-- <img class="model-img" src="images/model.jpeg" alt="model wearing jewellery"> --}}
+        <h1 class="text-white font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl mx-auto max-w-3xl">
+            You will fall in love with jewellery new Collection as soon as you view it
+        </h1>
+        <a href="#jewellery">
+            <button class="text-white font-mono mt-6 md:mt-10 mb-6 md:mb-14 border-2 rounded-sm px-6 py-2 font-semibold">
+                SHOP NOW
+            </button>
+        </a>
+    </div>
+
+    <div class="category" id="jewellery">
+        <div class="categories flex justify-center items-center mt-10 font-serif text-2xl md:text-4xl">
+            <h1>Shop By Category</h1>
+        </div>
+        <div class="products-category flex flex-wrap items-center justify-center gap-8 mt-8 md:mt-10 mb-10 md:mb-20">
+            <div class="necklace">
+                <a href="/necklace">
+                    <img class="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover" src="images/necklaces.jpeg" alt="Necklace">
+                    <h1 class="font-serif text-lg md:text-xl mt-2 text-center">Necklace</h1>
+                </a>
+            </div>
+            <div class="bracelets">
+                <a href="/bracelets">
+                    <img class="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover" src="images/bracelets.jpeg" alt="Bracelets">
+                    <h1 class="font-serif text-lg md:text-xl mt-2 text-center">Bracelets</h1>
+                </a>
+            </div>
+            <div class="earrings" id="earrings">
+                <a href="/earings">
+                    <img class="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover" src="images/earings.jpg" alt="Earrings">
+                    <h1 class="font-serif text-lg md:text-xl mt-2 text-center">Earrings</h1>
+                </a>
+            </div>
+            <div class="rings" id="rings">
+                <a href="/Rings">
+                    <img class="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover" src="images/rings.jpeg" alt="Rings">
+                    <h1 class="font-serif text-lg md:text-xl mt-2 text-center">Rings</h1>
+                </a>
+            </div>
+            <div class="chains" id="chains">
+                <a href="/Chains">
+                    <img class="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover" src="images/chain.jpeg" alt="Chains">
+                    <h1 class="font-serif text-lg md:text-xl mt-2 text-center">Chains</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="aboutUs bg-[#9EB6A5] p-4 md:p-10">
+        <div class="md:flex">
+            <div class="img md:w-1/2">
+                <img class="w-full h-auto object-cover" src="images/abot.jpeg" alt="About Us Image">
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-center">
+                <h1 class="flex justify-center items-center font-serif text-2xl md:text-4xl mt-5 text-center">An Ethical Content</h1>
+                <p class="flex justify-center items-center font-serif text-lg md:text-2xl mt-3 text-center px-2 md:px-10">
+                    Making jewelry requires responsibility to the earth that creates our materials and respect for the people
+                    who inhabit it. From day one, we committed to creating designs of ethical origins from mine to market. Today,
+                    we're a proud leader in sustainable sourcing and mindful production.
+                </p>
+                <div class="shopNowButton flex justify-center items-center mt-2">
+                    <a href="#jewellery">
+                        <button class="font-serif text-xl underline">Shop Now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="aboutusInfo p-4 md:p-10 mb-20">
+        <div class="flex justify-center items-center mt-5 mb-3">
+            <h1 class="font-serif text-2xl md:text-3xl">About Us</h1>
+        </div>
+        <div class="flex justify-center items-center text-center max-w-4xl mx-auto">
+            <p class="text-lg md:text-2xl font-serif">
+                Making jewelry requires responsibility to the earth that creates our materials and respect for the people who inhabit
+                it. From day one, we committed to creating designs of ethical origins from mine to market. Today, we’re a proud leader
+                in sustainable sourcing and mindful production.
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.getElementById("hideButton").addEventListener("click", hidden)
+    function hidden() {
+        let earing = document.getElementById("earrings");
+        let ring = document.getElementById("rings");
+        let chain = document.getElementById("chains")
+        if (earing.style.display !== "none" && ring.style.display !== "none" && chain.style.display !== "none") {
+            earing.style.display = "none";
+            ring.style.display = "none";
+            chain.style.display = "block";
+        }
+    }
+</script>
+
+</html>

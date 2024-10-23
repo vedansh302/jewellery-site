@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headers}}
+</head>
+
+<body class="bg-[#f8f6f1]">
+    {{>navbar}}
+    <div class="necklaceHeader">
+        <div
+            class="bg-no-repeat bg-[url('images/necklace-page.jpeg')] bg-cover w-auto h-auto md:pt-20 md:pr-20 md:pl-10 md:pb-20">
+            <h1 class="flex justify-center items-center pb-14 pt-14 font-serif text-2xl md:text-5xl text-white">
+                Necklaces
+            </h1>
+        </div>
+    </div>
+    <div class="flex">
+        <ul class="flex mb-5 justify-center items-center">
+            <li class="mt-5 pl-24 text-xl font-serif">Home</li> <span class=" ml-4 text-4xl">.</span>
+            <li class="mt-5 pl-2 text-xl font-serif">Necklace</li>
+        </ul>
+    </div>
+
+    <!-- necklace.handlebars -->
+    <table class="table-auto">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.price}}</td>
+                <td>{{this.category}}</td>
+                <td><img src="{{image}}" class="w-20" alt="{{name}}">
+                <td>
+                    <form action="/mycart/add" method="POST">
+                        <input type="hidden" name="productId" value="{{this._id}}">
+
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>

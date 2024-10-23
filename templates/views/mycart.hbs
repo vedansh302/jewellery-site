@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headers}}
+    <title>My Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="container mx-auto mt-8">
+        <h1 class="text-2xl flex items-center justify-center font-bold mb-4">Welcome, {{user.username}}</h1>
+        <h2 class="text-xl mx-7 mb-4 text-bold font-mono text-black">My Cart</h2>
+        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <thead class="bg-gray-800 text-white ">
+                <tr>
+                    <th class="py-3 px-4 text-left">Product Name</th>
+                    <th class="py-3 px-4 text-left">Quantity</th>
+                    <th class="py-3 px-4 text-left">Price</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-700">
+                {{#each products}}
+                {{#each this.items}}
+                <tr class="border-b hover:bg-gray-100">
+                    <td class="py-3 px-4">{{this.name}}</td>
+                    <td class="py-3 px-4">{{this.quantity}}</td>
+                    <td class="py-3 px-4">{{this.totalPrice}}</td>
+                </tr>
+                {{/each}}
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <div class="checkout">
+        <button>Checkout </button>
+    </div>
+</body>
+
+</html>
